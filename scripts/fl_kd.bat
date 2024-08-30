@@ -1,0 +1,11 @@
+python flPretrain_problem.py --flMode prox --args_key 1-1
+python flPretrain_problem.py --flMode prox --args_key 2-1
+python flPretrain_problem.py --flMode prox --args_key 2-2
+python flPretrain_problem.py --flMode prox --args_key 3-1
+python flPretrain_problem.py --flMode prox --args_key 3-2
+python flPretrain_problem.py --flMode prox --args_key 4-1
+python flPretrain_problem.py --flMode prox --args_key 4-2
+python flPretrain_problem.py --flMode prox --args_key 4-3
+python flPretrain_problem.py --flMode prox --args_key 4-4
+python flPretrain_problem.py --flMode prox --args_key 4-5
+python flPretrain_problem.py --flMode prox --args_key 4-6

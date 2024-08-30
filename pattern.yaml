@@ -1,0 +1,112 @@
+DEFAULT: &DEFAULT
+  wandb_project: LOGNN_addRealProx
+  fill: None
+#  ratio: 3
+#  train_num_layouts: 30
+#  epoch: 1000
+#  lr: 5e-3
+#  lrf: 1e-3
+#  pcnet_lr: 1e-3
+
+# client has same server and user nums
+1-1: &1
+  <<: *DEFAULT
+  ratio_c: 0
+  min: 2
+  max: 2
+
+#client has same server / user ratio, different server num
+#server 2~5
+2-1: &2-1
+  <<: *DEFAULT
+  ratio_c: 0
+  min: 2
+  max: 5
+
+#server 12~15
+2-2: &2-2
+  <<: *DEFAULT
+  ratio_c: 0
+  min: 12
+  max: 15
+
+#client has different server / user ratio, same server num
+#similar ratio
+3-1: &3-1
+  <<: *DEFAULT
+  ratio_c: 1
+  min: 2
+  max: 2
+  ratio_cr: [2, 4]
+
+#large ratio difference
+3-2: &3-2
+  <<: *DEFAULT
+  ratio_c: 1
+  min: 2
+  max: 2
+  ratio_cr: [2, 10]
+
+# client has different server / user ratio, different server num
+# similar ratio
+4-1: &4-1
+  <<: *DEFAULT
+  ratio_c: 1
+  min: 2
+  max: 5
+  ratio_cr: [2, 4]
+
+# large ratio difference
+4-2: &4-2
+  <<: *DEFAULT
+  ratio_c: 1
+  min: 2
+  max: 5
+  ratio_cr: [2, 10]
+
+# similar ratio
+4-3: &4-3
+  <<: *DEFAULT
+  ratio_c: 1
+  min: 12
+  max: 15
+  ratio_cr: [2, 4]
+
+# large ratio difference
+4-4: &4-4
+  <<: *DEFAULT
+  ratio_c: 1
+  min: 12
+  max: 15
+  ratio_cr: [2, 10]
+
+# large server num difference, similar ratio
+4-5: &4-5
+  <<: *DEFAULT
+  ratio_c: 1
+  min: 2
+  max: 20
+  ratio_cr: [2, 4]
+
+# large server num difference, larger difference ratio
+4-6: &4-6
+  <<: *DEFAULT
+  ratio_c: 1
+  min: 2
+  max: 20
+  ratio_cr: [2, 10]
+
+5-1:
+  <<: *DEFAULT
+
+
+
+
+
+
+
+
+
+
+
+
